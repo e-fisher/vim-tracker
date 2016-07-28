@@ -21,8 +21,6 @@ module Tracker
     end
 
     def send
-      logger.error('Missing key') && return if params[:api_key].to_s.empty?
-
       uri = URI.parse(Tracker::HEARTBEAT_URL)
       http = Net::HTTP.new(uri.host, uri.port)
       request = Net::HTTP::Post.new(uri.request_uri)

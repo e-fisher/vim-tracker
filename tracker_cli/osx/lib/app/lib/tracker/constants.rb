@@ -1,5 +1,5 @@
 module Tracker
-  HEARTBEAT_URL = 'http://trck.localtunnel.me/heartbeats'
+  HEARTBEAT_URL = 'http://tracker.edgarfisher.com/heartbeats'
 
 
   HTTP_ERRORS = [
