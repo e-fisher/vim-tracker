@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if
+  [[ -s "/home/edgar/www/travelling_ruby/packaging/vendor/ruby/2.2.0/environment" ]]
+then
+  source "/home/edgar/www/travelling_ruby/packaging/vendor/ruby/2.2.0/environment"
+  exec gem "$@"
+else
+  echo "ERROR: Missing RVM environment file: '/home/edgar/www/travelling_ruby/packaging/vendor/ruby/2.2.0/environment'" >&2
+  exit 1
+fi

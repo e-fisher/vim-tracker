@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+ruby '2.2.2'
+
+group :development do
+  gem 'rake'
+  gem 'rspec'
+  gem 'guard-rspec'
+  gem 'webmock'
+end
+
+gem 'language_sniffer'
+gem 'parseconfig'

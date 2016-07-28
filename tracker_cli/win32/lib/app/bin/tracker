@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require_relative "../lib/tracker"
+
+# Tracker.debug = true
+begin
+  Tracker::Cli.new(ARGV).run
+rescue Tracker::FileMissing
+  # Do nothing if file does not exist
+rescue StandardError => e
+  Tracker::Logging.logger.error(e)
+  raise e if Tracker.debug
+end
